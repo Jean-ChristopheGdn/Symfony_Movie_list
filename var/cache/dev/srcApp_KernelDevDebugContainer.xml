@@ -3407,14 +3407,13 @@
     </service>
     <service id="doctrine.dbal.default_connection" class="Doctrine\DBAL\Connection" public="true">
       <argument type="collection">
-        <argument key="dbname">purple</argument>
-        <argument key="user">Jean</argument>
-        <argument key="password">coding</argument>
+        <argument key="url">%env(resolve:DATABASE_URL)%</argument>
         <argument key="host">localhost</argument>
-        <argument key="driver">pdo_mysql</argument>
         <argument key="port">null</argument>
+        <argument key="user">root</argument>
+        <argument key="password">null</argument>
+        <argument key="driver">pdo_mysql</argument>
         <argument key="driverOptions" type="collection"/>
-        <argument key="serverVersion">5.6</argument>
         <argument key="defaultTableOptions" type="collection"/>
       </argument>
       <argument type="service" id="doctrine.dbal.default_connection.configuration"/>
