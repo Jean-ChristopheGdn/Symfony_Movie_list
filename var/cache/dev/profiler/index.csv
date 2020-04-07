@@ -29,3 +29,15 @@ ec6850,127.0.0.1,GET,http://localhost:8000/register,1586265504,48b777,500
 e272f5,127.0.0.1,GET,http://localhost:8000/login,1586265589,,200
 0f51d1,127.0.0.1,GET,http://localhost:8000/login,1586265596,e74591,500
 e74591,127.0.0.1,POST,http://localhost:8000/login,1586265596,,500
+a9e27d,127.0.0.1,GET,http://localhost:8000/login,1586266873,,200
+7f9c88,127.0.0.1,GET,http://localhost:8000/logout,1586266877,,302
+c5b822,127.0.0.1,GET,http://localhost:8000/,1586266878,,404
+a1a4d0,127.0.0.1,GET,http://localhost:8000/register,1586267050,770c8e,500
+770c8e,127.0.0.1,GET,http://localhost:8000/register,1586267050,,500
+c91328,127.0.0.1,GET,http://localhost:8000/register,1586267082,00ffc3,500
+00ffc3,127.0.0.1,GET,http://localhost:8000/register,1586267082,,500
+c60e83,127.0.0.1,GET,http://localhost:8000/register,1586267146,,200
+a8e644,127.0.0.1,POST,http://localhost:8000/register,1586267160,,200
+8388bc,127.0.0.1,GET,http://localhost:8000/login,1586267170,,200
+1312fa,127.0.0.1,GET,http://localhost:8000/login,1586267175,d5b74b,500
+d5b74b,127.0.0.1,POST,http://localhost:8000/login,1586267175,,500
