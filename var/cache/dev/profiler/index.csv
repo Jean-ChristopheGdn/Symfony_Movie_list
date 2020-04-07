@@ -60,3 +60,8 @@ d9381e,127.0.0.1,POST,http://localhost:8000/login,1586273268,,500
 3ef2c1,127.0.0.1,GET,http://localhost:8000/index,1586276928,339260,404
 339260,127.0.0.1,GET,http://localhost:8000/index,1586276928,,404
 3be621,127.0.0.1,GET,http://localhost:8000/login,1586276934,,200
+fc985b,127.0.0.1,GET,http://localhost:8000/,1586278903,,404
+67955e,127.0.0.1,GET,http://localhost:8000/login,1586278906,,200
+009206,127.0.0.1,GET,http://localhost:8000/logout,1586278909,,302
+b9c592,127.0.0.1,GET,http://localhost:8000/,1586278909,,404
+fb0813,127.0.0.1,GET,http://localhost:8000/register,1586278913,,200
