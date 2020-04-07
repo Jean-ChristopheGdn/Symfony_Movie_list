@@ -413,6 +413,6 @@ class __TwigTemplate_d5226b72f680e14a8e6aa612a7b1f7cd5102cffea70f3d282a16b654ec4
         </div>
     {% endfor %}
 {% endblock %}
-", "@Debug/Profiler/dump.html.twig", "/home/jean/Documents/Exercices/Symfony/symfony_project/vendor/symfony/debug-bundle/Resources/views/Profiler/dump.html.twig");
+", "@Debug/Profiler/dump.html.twig", "/home/jean/Documents/Github/symfony_project/vendor/symfony/debug-bundle/Resources/views/Profiler/dump.html.twig");
     }
 }

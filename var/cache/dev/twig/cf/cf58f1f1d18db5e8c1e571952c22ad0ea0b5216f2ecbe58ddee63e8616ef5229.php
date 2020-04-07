@@ -135,6 +135,6 @@ class __TwigTemplate_ce4e2e323f65928a327a2ff2cc0770d12905e6d17bd16192462f563243b
         </div>
     </body>
 </html>
-", "@Twig/Exception/error.html.twig", "/home/jean/Documents/Exercices/Symfony/symfony_project/vendor/symfony/twig-bundle/Resources/views/Exception/error.html.twig");
+", "@Twig/Exception/error.html.twig", "/home/jean/Documents/Github/symfony_project/vendor/symfony/twig-bundle/Resources/views/Exception/error.html.twig");
     }
 }

@@ -146,6 +146,6 @@ class __TwigTemplate_f452a1011ad72d8fc9dd67932598bf29d842797cdaa11d6fbfba19cecdb
         </div>
     </div>
 {% endblock %}
-", "@WebProfiler/Profiler/toolbar_redirect.html.twig", "/home/jean/Documents/Exercices/Symfony/symfony_project/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/toolbar_redirect.html.twig");
+", "@WebProfiler/Profiler/toolbar_redirect.html.twig", "/home/jean/Documents/Github/symfony_project/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/toolbar_redirect.html.twig");
     }
 }
