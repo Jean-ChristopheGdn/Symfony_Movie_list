@@ -113,13 +113,13 @@ class __TwigTemplate_692022b8c818efae4aec109d95f4c8e3117510b10c30cb53deaf3f1c5dd
         }
         // line 16
         echo "
-    <h1 class=\"h3 mb-3 font-weight-normal\">Veuillez vous connecter</h1>
+    <h1 class=\"h3 mb-3 font-weight-normal\">Login</h1>
     <label for=\"inputEmail\">Email</label>
     <input type=\"email\" value=\"";
         // line 19
         echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 19, $this->source); })()), "html", null, true);
         echo "\" name=\"email\" id=\"inputEmail\" class=\"form-control\" required autofocus>
-    <label for=\"inputPassword\">Mot de passe</label>
+    <label for=\"inputPassword\">Password</label>
     <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" required>
 
     <input type=\"hidden\" name=\"_csrf_token\"
@@ -134,13 +134,13 @@ class __TwigTemplate_692022b8c818efae4aec109d95f4c8e3117510b10c30cb53deaf3f1c5dd
         echo "
         <div class=\"checkbox mb-3\">
             <label>
-                <input type=\"checkbox\" name=\"_remember_me\"> Se souvenir de moi
+                <input type=\"checkbox\" name=\"_remember_me\"> Remember me
             </label>
         </div>
    
 
     <button class=\"btn btn-lg btn-primary\" type=\"submit\">
-        Se connecter
+        Submit
     </button>
 </form>
 ";
@@ -185,10 +185,10 @@ class __TwigTemplate_692022b8c818efae4aec109d95f4c8e3117510b10c30cb53deaf3f1c5dd
         </div>
     {% endif %}
 
-    <h1 class=\"h3 mb-3 font-weight-normal\">Veuillez vous connecter</h1>
+    <h1 class=\"h3 mb-3 font-weight-normal\">Login</h1>
     <label for=\"inputEmail\">Email</label>
     <input type=\"email\" value=\"{{ last_username }}\" name=\"email\" id=\"inputEmail\" class=\"form-control\" required autofocus>
-    <label for=\"inputPassword\">Mot de passe</label>
+    <label for=\"inputPassword\">Password</label>
     <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" required>
 
     <input type=\"hidden\" name=\"_csrf_token\"
@@ -201,13 +201,13 @@ class __TwigTemplate_692022b8c818efae4aec109d95f4c8e3117510b10c30cb53deaf3f1c5dd
 
         <div class=\"checkbox mb-3\">
             <label>
-                <input type=\"checkbox\" name=\"_remember_me\"> Se souvenir de moi
+                <input type=\"checkbox\" name=\"_remember_me\"> Remember me
             </label>
         </div>
    
 
     <button class=\"btn btn-lg btn-primary\" type=\"submit\">
-        Se connecter
+        Submit
     </button>
 </form>
 {% endblock %}
