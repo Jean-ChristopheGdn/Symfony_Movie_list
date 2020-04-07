@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Movies{% endblock %}
+
+{% block body %}
+    <h1>Movies</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ movie.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ movie.title }}</td>
+            </tr>
+            <tr>
+                <th>Release_date</th>
+                <td>{{ movie.releaseDate }}</td>
+            </tr>
+            <tr>
+                <th>Poster</th>
+                <td>{{ movie.poster }}</td>
+            </tr>
+            <tr>
+                <th>Cast</th>
+                <td>{{ movie.cast }}</td>
+            </tr>
+            <tr>
+                <th>Genre</th>
+                <td>{{ movie.genre }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('movies_index') }}">back to list</a>
+
+    <a href="{{ path('movies_edit', {'id': movie.id}) }}">edit</a>
+
+    {{ include('movies/_delete_form.html.twig') }}
+{% endblock %}

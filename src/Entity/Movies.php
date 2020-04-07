@@ -26,6 +26,21 @@ class Movies
      */
     private $release_date;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $poster;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $cast;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $genre;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -51,6 +66,42 @@ class Movies
     public function setReleaseDate(string $release_date): self
     {
         $this->release_date = $release_date;
+
+        return $this;
+    }
+
+    public function getPoster(): ?string
+    {
+        return $this->poster;
+    }
+
+    public function setPoster(?string $poster): self
+    {
+        $this->poster = $poster;
+
+        return $this;
+    }
+
+    public function getCast(): ?string
+    {
+        return $this->cast;
+    }
+
+    public function setCast(string $cast): self
+    {
+        $this->cast = $cast;
+
+        return $this;
+    }
+
+    public function getGenre(): ?string
+    {
+        return $this->genre;
+    }
+
+    public function setGenre(string $genre): self
+    {
+        $this->genre = $genre;
 
         return $this;
     }
