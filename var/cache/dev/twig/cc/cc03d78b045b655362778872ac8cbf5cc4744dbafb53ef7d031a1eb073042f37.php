@@ -52,20 +52,69 @@ class __TwigTemplate_b8c55721a463f0f635caa5d9d5c3c0f8228e32d7bda5daa5b0a5bf570a7
         // line 5
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
+        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">
         ";
-        // line 6
-        $this->displayBlock('stylesheets', $context, $blocks);
         // line 7
+        $this->displayBlock('stylesheets', $context, $blocks);
+        // line 8
         echo "    </head>
     <body>
-        ";
-        // line 9
-        $this->displayBlock('body', $context, $blocks);
-        // line 10
-        echo "        ";
-        $this->displayBlock('javascripts', $context, $blocks);
+    <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
+  <a class=\"navbar-brand\" href=\"";
         // line 11
-        echo "    </body>
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
+        echo "\">AMNESIA</a>
+  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+    <span class=\"navbar-toggler-icon\"></span>
+  </button>
+
+  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
+    <ul class=\"navbar-nav mr-auto\">
+      <li class=\"nav-item active\">
+        <a class=\"nav-link\" href=\"movies\">My Movies<span class=\"sr-only\">(current)</span></a>
+      </li>
+      <li class=\"nav-item\">
+        <a class=\"nav-link\" href=\"#\">Link</a>
+      </li>
+      <li class=\"nav-item dropdown\">
+        <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+          Dropdown
+        </a>
+        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
+          <a class=\"dropdown-item\" href=\"#\">Action</a>
+          <a class=\"dropdown-item\" href=\"#\">Another action</a>
+          <div class=\"dropdown-divider\"></div>
+          <a class=\"dropdown-item\" href=\"#\">Something else here</a>
+        </div>
+      </li>
+
+    </ul>
+          <li class=\"nav-item\" text-center>
+        <a class=\"nav-link\" href=\"login\">Login</a>
+      </li>
+            <li class=\"nav-item\" texte-center>
+        <a class=\"nav-link\" href=\"register\">Register</a>
+      </li>
+    <form class=\"form-inline my-2 my-lg-\">
+      <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search Movies\" aria-label=\"Search\">
+      <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>
+    </form>
+  </div>
+</nav>
+        ";
+        // line 49
+        $this->displayBlock('body', $context, $blocks);
+        // line 50
+        echo "
+        ";
+        // line 51
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 52
+        echo "        <script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\" integrity=\"sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n\" crossorigin=\"anonymous\"></script>
+        <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\" integrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\" crossorigin=\"anonymous\"></script>
+        <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\" integrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\" crossorigin=\"anonymous\"></script>
+
+    </body>
 </html>
 ";
         
@@ -95,7 +144,7 @@ class __TwigTemplate_b8c55721a463f0f635caa5d9d5c3c0f8228e32d7bda5daa5b0a5bf570a7
 
     }
 
-    // line 6
+    // line 7
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -113,7 +162,7 @@ class __TwigTemplate_b8c55721a463f0f635caa5d9d5c3c0f8228e32d7bda5daa5b0a5bf570a7
 
     }
 
-    // line 9
+    // line 49
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -131,7 +180,7 @@ class __TwigTemplate_b8c55721a463f0f635caa5d9d5c3c0f8228e32d7bda5daa5b0a5bf570a7
 
     }
 
-    // line 10
+    // line 51
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -154,9 +203,14 @@ class __TwigTemplate_b8c55721a463f0f635caa5d9d5c3c0f8228e32d7bda5daa5b0a5bf570a7
         return "base.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  135 => 10,  117 => 9,  99 => 6,  80 => 5,  68 => 11,  65 => 10,  63 => 9,  59 => 7,  57 => 6,  53 => 5,  47 => 1,);
+        return array (  184 => 51,  166 => 49,  148 => 7,  129 => 5,  113 => 52,  111 => 51,  108 => 50,  106 => 49,  65 => 11,  60 => 8,  58 => 7,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -166,11 +220,56 @@ class __TwigTemplate_b8c55721a463f0f635caa5d9d5c3c0f8228e32d7bda5daa5b0a5bf570a7
     <head>
         <meta charset=\"UTF-8\">
         <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+    <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
+  <a class=\"navbar-brand\" href=\"{{ path('home') }}\">AMNESIA</a>
+  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+    <span class=\"navbar-toggler-icon\"></span>
+  </button>
+
+  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
+    <ul class=\"navbar-nav mr-auto\">
+      <li class=\"nav-item active\">
+        <a class=\"nav-link\" href=\"movies\">My Movies<span class=\"sr-only\">(current)</span></a>
+      </li>
+      <li class=\"nav-item\">
+        <a class=\"nav-link\" href=\"#\">Link</a>
+      </li>
+      <li class=\"nav-item dropdown\">
+        <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+          Dropdown
+        </a>
+        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
+          <a class=\"dropdown-item\" href=\"#\">Action</a>
+          <a class=\"dropdown-item\" href=\"#\">Another action</a>
+          <div class=\"dropdown-divider\"></div>
+          <a class=\"dropdown-item\" href=\"#\">Something else here</a>
+        </div>
+      </li>
+
+    </ul>
+          <li class=\"nav-item\" text-center>
+        <a class=\"nav-link\" href=\"login\">Login</a>
+      </li>
+            <li class=\"nav-item\" texte-center>
+        <a class=\"nav-link\" href=\"register\">Register</a>
+      </li>
+    <form class=\"form-inline my-2 my-lg-\">
+      <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search Movies\" aria-label=\"Search\">
+      <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>
+    </form>
+  </div>
+</nav>
         {% block body %}{% endblock %}
+
         {% block javascripts %}{% endblock %}
+        <script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\" integrity=\"sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n\" crossorigin=\"anonymous\"></script>
+        <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\" integrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\" crossorigin=\"anonymous\"></script>
+        <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\" integrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\" crossorigin=\"anonymous\"></script>
+
     </body>
 </html>
 ", "base.html.twig", "/home/jean/Documents/Github/symfony_project/templates/base.html.twig");
