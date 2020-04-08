@@ -15,20 +15,14 @@ return [
     '_profiler_router' => [['token'], ['_controller' => 'web_profiler.controller.router::panelAction'], [], [['text', '/router'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
-<<<<<<< HEAD
-    'home' => [[], ['_controller' => 'App\\Controller\\HomeController::index'], [], [['text', '/home']], [], []],
-=======
->>>>>>> 88ce6800a3ee30b9d16ce0b3ca3c00b047967a9c
     'movies_index' => [[], ['_controller' => 'App\\Controller\\MoviesController::index'], [], [['text', '/movies/']], [], []],
     'movies_new' => [[], ['_controller' => 'App\\Controller\\MoviesController::new'], [], [['text', '/movies/new']], [], []],
     'movies_show' => [['id'], ['_controller' => 'App\\Controller\\MoviesController::show'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/movies']], [], []],
     'movies_edit' => [['id'], ['_controller' => 'App\\Controller\\MoviesController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id'], ['text', '/movies']], [], []],
     'movies_delete' => [['id'], ['_controller' => 'App\\Controller\\MoviesController::delete'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/movies']], [], []],
     'app_register' => [[], ['_controller' => 'App\\Controller\\RegistrationController::register'], [], [['text', '/register']], [], []],
+    'search' => [[], ['_controller' => 'App\\Controller\\SearchController::index'], [], [['text', '/search']], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], []],
     'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], []],
-<<<<<<< HEAD
-=======
     'home' => [[], ['_controller' => 'App\\Controller\\HomeController::index'], [], [['text', '/']], [], []],
->>>>>>> 88ce6800a3ee30b9d16ce0b3ca3c00b047967a9c
 ];
