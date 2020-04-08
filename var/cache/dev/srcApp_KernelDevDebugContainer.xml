@@ -324,7 +324,13 @@
         <argument type="service" id=".service_locator.vdmMuyE.App\Controller\HomeController"/>
       </call>
     </service>
-<<<<<<< HEAD
+    <service id="App\Controller\MoviesController" class="App\Controller\MoviesController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.vdmMuyE.App\Controller\MoviesController"/>
+      </call>
+    </service>
     <service id="App\Controller\RegistrationController" class="App\Controller\RegistrationController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -339,8 +345,18 @@
         <argument type="service" id=".service_locator.vdmMuyE.App\Controller\SecurityController"/>
       </call>
     </service>
+    <service id="App\Form\MovieType" class="App\Form\MovieType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\MoviesType" class="App\Form\MoviesType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
+    </service>
+    <service id="App\Repository\MoviesRepository" class="App\Repository\MoviesRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
     </service>
     <service id="App\Repository\UsersRepository" class="App\Repository\UsersRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
@@ -352,25 +368,6 @@
       <argument type="service" id="security.csrf.token_manager"/>
       <argument type="service" id="security.user_password_encoder.generic"/>
     </service>
-=======
-    <service id="App\Controller\MoviesController" class="App\Controller\MoviesController" public="true" autowire="true" autoconfigure="true">
-      <tag name="controller.service_arguments"/>
-      <tag name="container.service_subscriber"/>
-      <call method="setContainer">
-        <argument type="service" id=".service_locator.vdmMuyE.App\Controller\MoviesController"/>
-      </call>
-    </service>
-    <service id="App\Form\MovieType" class="App\Form\MovieType" autowire="true" autoconfigure="true">
-      <tag name="form.type"/>
-    </service>
-    <service id="App\Form\MoviesType" class="App\Form\MoviesType" autowire="true" autoconfigure="true">
-      <tag name="form.type"/>
-    </service>
-    <service id="App\Repository\MoviesRepository" class="App\Repository\MoviesRepository" autowire="true" autoconfigure="true">
-      <tag name="doctrine.repository_service"/>
-      <argument type="service" id="doctrine"/>
-    </service>
->>>>>>> 75ba9e5e536b26405b33c4b2acee45712f1bfbce
     <service id=".legacy_controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
       <tag name="monolog.logger" channel="request"/>
       <argument type="service" id="kernel"/>
@@ -782,12 +779,9 @@
         <argument>Symfony\Bridge\Doctrine\Form\Type</argument>
       </argument>
       <argument type="collection">
-<<<<<<< HEAD
-        <argument>App\Form\RegistrationFormType</argument>
-=======
         <argument>App\Form\MovieType</argument>
         <argument>App\Form\MoviesType</argument>
->>>>>>> 75ba9e5e536b26405b33c4b2acee45712f1bfbce
+        <argument>App\Form\RegistrationFormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FileType</argument>
@@ -1121,11 +1115,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-<<<<<<< HEAD
-      <argument type="service" id=".service_locator.I2hqRdn"/>
-=======
-      <argument type="service" id=".service_locator.g3jrque"/>
->>>>>>> 75ba9e5e536b26405b33c4b2acee45712f1bfbce
+      <argument type="service" id=".service_locator.FHdueWm"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -3471,11 +3461,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory" public="false">
-<<<<<<< HEAD
-      <argument type="service" id=".service_locator.2mzbxcl"/>
-=======
-      <argument type="service" id=".service_locator.pfZpLUX"/>
->>>>>>> 75ba9e5e536b26405b33c4b2acee45712f1bfbce
+      <argument type="service" id=".service_locator.5jRhUZ7"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -4746,11 +4732,7 @@
       <tag name="console.command" command="server:run"/>
       <argument>/home/val/code/BlaxFontaine/symfony_project/public</argument>
       <argument>dev</argument>
-<<<<<<< HEAD
-      <argument>/home/jean/Documents/Github/symfony_project/var/cache</argument>
-=======
       <argument>/home/val/code/BlaxFontaine/symfony_project/var/cache</argument>
->>>>>>> 75ba9e5e536b26405b33c4b2acee45712f1bfbce
       <call method="setName">
         <argument>server:run</argument>
       </call>
@@ -4759,33 +4741,21 @@
       <tag name="console.command" command="server:start"/>
       <argument>/home/val/code/BlaxFontaine/symfony_project/public</argument>
       <argument>dev</argument>
-<<<<<<< HEAD
-      <argument>/home/jean/Documents/Github/symfony_project/var/cache</argument>
-=======
       <argument>/home/val/code/BlaxFontaine/symfony_project/var/cache</argument>
->>>>>>> 75ba9e5e536b26405b33c4b2acee45712f1bfbce
       <call method="setName">
         <argument>server:start</argument>
       </call>
     </service>
     <service id="web_server.command.server_stop" class="Symfony\Bundle\WebServerBundle\Command\ServerStopCommand" public="false">
       <tag name="console.command" command="server:stop"/>
-<<<<<<< HEAD
-      <argument>/home/jean/Documents/Github/symfony_project/var/cache</argument>
-=======
       <argument>/home/val/code/BlaxFontaine/symfony_project/var/cache</argument>
->>>>>>> 75ba9e5e536b26405b33c4b2acee45712f1bfbce
       <call method="setName">
         <argument>server:stop</argument>
       </call>
     </service>
     <service id="web_server.command.server_status" class="Symfony\Bundle\WebServerBundle\Command\ServerStatusCommand" public="false">
       <tag name="console.command" command="server:status"/>
-<<<<<<< HEAD
-      <argument>/home/jean/Documents/Github/symfony_project/var/cache</argument>
-=======
       <argument>/home/val/code/BlaxFontaine/symfony_project/var/cache</argument>
->>>>>>> 75ba9e5e536b26405b33c4b2acee45712f1bfbce
       <call method="setName">
         <argument>server:status</argument>
       </call>
@@ -4793,28 +4763,25 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" autoconfigure="true" abstract="true"/>
-<<<<<<< HEAD
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\MoviesController" class="App\Controller\MoviesController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\MoviesController" class="App\Controller\MoviesController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\MoviesController" class="App\Controller\MoviesController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UsersRepository" class="App\Repository\UsersRepository" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Repository\UsersRepository" class="App\Repository\UsersRepository" autowire="true" autoconfigure="true" abstract="true"/>
-=======
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\MoviesController" class="App\Controller\MoviesController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\MoviesController" class="App\Controller\MoviesController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\MoviesController" class="App\Controller\MoviesController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\MovieType" class="App\Form\MovieType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\MovieType" class="App\Form\MovieType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\MoviesType" class="App\Form\MoviesType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\MoviesType" class="App\Form\MoviesType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\MoviesRepository" class="App\Repository\MoviesRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\MoviesRepository" class="App\Repository\MoviesRepository" autowire="true" autoconfigure="true" abstract="true"/>
->>>>>>> 75ba9e5e536b26405b33c4b2acee45712f1bfbce
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UsersRepository" class="App\Repository\UsersRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\UsersRepository" class="App\Repository\UsersRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".service_locator.CmORmuK" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5025,7 +4992,18 @@
         <argument>make:migration</argument>
       </call>
     </service>
-<<<<<<< HEAD
+    <service id=".service_locator.GMFifXH" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="moviesRepository" type="service" id="App\Repository\MoviesRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.ppiRA5w" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="movie" type="service" id=".errored..service_locator.ppiRA5w.App\Entity\Movies"/>
+      </argument>
+    </service>
     <service id=".service_locator.XGQv6wh" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5040,38 +5018,21 @@
         <argument key="authenticationUtils" type="service" id="security.authentication_utils"/>
       </argument>
     </service>
-    <service id=".service_locator.v0SQ15e" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="App\Controller\RegistrationController::register" type="service" id=".service_locator.XGQv6wh"/>
-        <argument key="App\Controller\SecurityController::login" type="service" id=".service_locator.g.xob4v"/>
-        <argument key="App\Controller\RegistrationController:register" type="service" id=".service_locator.XGQv6wh"/>
-        <argument key="App\Controller\SecurityController:login" type="service" id=".service_locator.g.xob4v"/>
-=======
-    <service id=".service_locator.GMFifXH" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="moviesRepository" type="service" id="App\Repository\MoviesRepository"/>
-      </argument>
-    </service>
-    <service id=".service_locator.ppiRA5w" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="movie" type="service" id=".errored..service_locator.ppiRA5w.App\Entity\Movies"/>
-      </argument>
-    </service>
-    <service id=".service_locator.ik0uV1i" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.EQmSgTW" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\MoviesController::delete" type="service" id=".service_locator.ppiRA5w"/>
         <argument key="App\Controller\MoviesController::edit" type="service" id=".service_locator.ppiRA5w"/>
         <argument key="App\Controller\MoviesController::index" type="service" id=".service_locator.GMFifXH"/>
         <argument key="App\Controller\MoviesController::show" type="service" id=".service_locator.ppiRA5w"/>
+        <argument key="App\Controller\RegistrationController::register" type="service" id=".service_locator.XGQv6wh"/>
+        <argument key="App\Controller\SecurityController::login" type="service" id=".service_locator.g.xob4v"/>
         <argument key="App\Controller\MoviesController:delete" type="service" id=".service_locator.ppiRA5w"/>
         <argument key="App\Controller\MoviesController:edit" type="service" id=".service_locator.ppiRA5w"/>
         <argument key="App\Controller\MoviesController:index" type="service" id=".service_locator.GMFifXH"/>
         <argument key="App\Controller\MoviesController:show" type="service" id=".service_locator.ppiRA5w"/>
->>>>>>> 75ba9e5e536b26405b33c4b2acee45712f1bfbce
+        <argument key="App\Controller\RegistrationController:register" type="service" id=".service_locator.XGQv6wh"/>
+        <argument key="App\Controller\SecurityController:login" type="service" id=".service_locator.g.xob4v"/>
       </argument>
     </service>
     <service id=".service_locator.Y7gDuDN" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -5133,18 +5094,12 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-<<<<<<< HEAD
-    <service id=".service_locator.I2hqRdn" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="App\Form\RegistrationFormType" type="service" id="App\Form\RegistrationFormType"/>
-=======
-    <service id=".service_locator.g3jrque" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.FHdueWm" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\MovieType" type="service" id="App\Form\MovieType"/>
         <argument key="App\Form\MoviesType" type="service" id="App\Form\MoviesType"/>
->>>>>>> 75ba9e5e536b26405b33c4b2acee45712f1bfbce
+        <argument key="App\Form\RegistrationFormType" type="service" id="App\Form\RegistrationFormType"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service" id="form.type.entity"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service" id="form.type.choice"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\FileType" type="service" id="form.type.file"/>
@@ -5162,17 +5117,11 @@
         <argument key="doctrine.orm.default_listeners.attach_entity_listeners" type="service" id="doctrine.orm.default_listeners.attach_entity_listeners"/>
       </argument>
     </service>
-<<<<<<< HEAD
-    <service id=".service_locator.2mzbxcl" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="App\Repository\UsersRepository" type="service" id="App\Repository\UsersRepository"/>
-=======
-    <service id=".service_locator.pfZpLUX" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.5jRhUZ7" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\MoviesRepository" type="service" id="App\Repository\MoviesRepository"/>
->>>>>>> 75ba9e5e536b26405b33c4b2acee45712f1bfbce
+        <argument key="App\Repository\UsersRepository" type="service" id="App\Repository\UsersRepository"/>
       </argument>
     </service>
     <service id="debug.security.voter.security.access.authenticated_voter" class="Symfony\Component\Security\Core\Authorization\Voter\TraceableVoter">
@@ -5377,7 +5326,12 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.vdmMuyE" method="withContext"/>
     </service>
-<<<<<<< HEAD
+    <service id=".service_locator.vdmMuyE.App\Controller\MoviesController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\MoviesController"/>
+      <argument>App\Controller\MoviesController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.vdmMuyE" method="withContext"/>
+    </service>
     <service id=".service_locator.vdmMuyE.App\Controller\RegistrationController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\RegistrationController"/>
       <argument>App\Controller\RegistrationController</argument>
@@ -5387,11 +5341,6 @@
     <service id=".service_locator.vdmMuyE.App\Controller\SecurityController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\SecurityController"/>
       <argument>App\Controller\SecurityController</argument>
-=======
-    <service id=".service_locator.vdmMuyE.App\Controller\MoviesController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator_context" id="App\Controller\MoviesController"/>
-      <argument>App\Controller\MoviesController</argument>
->>>>>>> 75ba9e5e536b26405b33c4b2acee45712f1bfbce
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.vdmMuyE" method="withContext"/>
     </service>
@@ -5526,20 +5475,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-<<<<<<< HEAD
-      <argument type="service" id=".service_locator.v0SQ15e"/>
-=======
-      <argument type="service" id=".service_locator.ik0uV1i"/>
->>>>>>> 75ba9e5e536b26405b33c4b2acee45712f1bfbce
+      <argument type="service" id=".service_locator.EQmSgTW"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-<<<<<<< HEAD
-      <argument type="service" id=".service_locator.v0SQ15e"/>
-=======
-      <argument type="service" id=".service_locator.ik0uV1i"/>
->>>>>>> 75ba9e5e536b26405b33c4b2acee45712f1bfbce
+      <argument type="service" id=".service_locator.EQmSgTW"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -5927,11 +5868,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-<<<<<<< HEAD
-    <service id="argument_resolver.controller_locator" alias=".service_locator.v0SQ15e"/>
-=======
-    <service id="argument_resolver.controller_locator" alias=".service_locator.ik0uV1i"/>
->>>>>>> 75ba9e5e536b26405b33c4b2acee45712f1bfbce
+    <service id="argument_resolver.controller_locator" alias=".service_locator.EQmSgTW"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

@@ -150,6 +150,6 @@ class __TwigTemplate_2b1f0812cf27154f27bfed0bb0eb38b0ce6c2460a0da296eb9c2af031c8
         <button class=\"btn\">Register</button>
     {{ form_end(registrationForm) }}
 {% endblock %}
-", "registration/register.html.twig", "/home/jean/Documents/Github/symfony_project/templates/registration/register.html.twig");
+", "registration/register.html.twig", "/home/val/code/BlaxFontaine/symfony_project/templates/registration/register.html.twig");
     }
 }

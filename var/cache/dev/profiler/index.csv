@@ -96,3 +96,7 @@ eca677,127.0.0.1,GET,http://127.0.0.1:8000/movies/new,1586272398,,200
 55eff3,127.0.0.1,GET,http://127.0.0.1:8000/movies/1/edit,1586272432,,200
 4fc6d8,127.0.0.1,GET,http://127.0.0.1:8000/movies/,1586272434,,200
 >>>>>>> 75ba9e5e536b26405b33c4b2acee45712f1bfbce
+60b1cc,127.0.0.1,GET,http://localhost:8000/,1586337170,,404
+e822c2,127.0.0.1,GET,http://localhost:8000/favicon.ico,1586337171,503d64,404
+503d64,127.0.0.1,GET,http://localhost:8000/favicon.ico,1586337171,,404
+730340,127.0.0.1,GET,http://localhost:8000/home,1586337192,,200
