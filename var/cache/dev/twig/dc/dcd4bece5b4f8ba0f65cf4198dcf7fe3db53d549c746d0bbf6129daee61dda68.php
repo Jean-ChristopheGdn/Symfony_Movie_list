@@ -140,6 +140,6 @@ class __TwigTemplate_02d0fd01a59a3496399819ec43424327fa23b8e0b946b91991403e1a9de
 
     {{ include('movies/_delete_form.html.twig') }}
 {% endblock %}
-", "movies/edit.html.twig", "/home/jean/Documents/Github/symfony_project/templates/movies/edit.html.twig");
+", "movies/edit.html.twig", "/home/val/code/BlaxFontaine/symfony_project/templates/movies/edit.html.twig");
     }
 }

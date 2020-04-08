@@ -81,6 +81,6 @@ class __TwigTemplate_6f49a9da998648a2bde1ee137bfd126992c1847431cae51616679efca10
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ movie.id) }}\">
     <button class=\"btn\">Delete</button>
 </form>
-", "movies/_delete_form.html.twig", "/home/jean/Documents/Github/symfony_project/templates/movies/_delete_form.html.twig");
+", "movies/_delete_form.html.twig", "/home/val/code/BlaxFontaine/symfony_project/templates/movies/_delete_form.html.twig");
     }
 }

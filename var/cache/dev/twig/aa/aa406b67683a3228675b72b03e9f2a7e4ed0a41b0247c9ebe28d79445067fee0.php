@@ -275,6 +275,6 @@ class __TwigTemplate_19f755b50f12d69b4d559391d900d60b386d9e922a2a9c57454a472575d
     </body>
 </html>
 {% block after_html %}{% endblock %}
-", "@Twig/layout.html.twig", "/home/jean/Documents/Github/symfony_project/vendor/symfony/twig-bundle/Resources/views/layout.html.twig");
+", "@Twig/layout.html.twig", "/home/val/code/BlaxFontaine/symfony_project/vendor/symfony/twig-bundle/Resources/views/layout.html.twig");
     }
 }
