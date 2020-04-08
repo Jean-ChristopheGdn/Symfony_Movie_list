@@ -65,7 +65,7 @@ class __TwigTemplate_9abaf92c95a1e7cbe117cfdbc0561a55ddb6af20b849c77432100a67b31
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Hello HomeController!";
+        echo "Homepage!";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -85,29 +85,56 @@ class __TwigTemplate_9abaf92c95a1e7cbe117cfdbc0561a55ddb6af20b849c77432100a67b31
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class=\"example-wrapper\">
-    <h1>Hello ";
-        // line 12
-        echo twig_escape_filter($this->env, (isset($context["controller_name"]) || array_key_exists("controller_name", $context) ? $context["controller_name"] : (function () { throw new RuntimeError('Variable "controller_name" does not exist.', 12, $this->source); })()), "html", null, true);
-        echo "! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href=\"";
-        // line 16
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("/home/jean/Documents/Github/symfony_project/src/Controller/HomeController.php", 0), "html", null, true);
-        echo "\">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href=\"";
-        // line 17
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("/home/jean/Documents/Github/symfony_project/templates/home/index.html.twig", 0), "html", null, true);
-        echo "\">templates/home/index.html.twig</a></code></li>
-    </ul>
+        echo "<div class=\"jumbotron text-center bg-white\">
+    <h1>WHITE WIDOW</h1>
+    <p>White Widow est une souche de cannabis Indica créée par le producteur de cannabis australien Scott « Shantibaba » 
+    Blakey. Son origine proviendrait d'un croisement entre une femelle Sativa brésilienne et un mâle Sativa/Indica du Sud 
+    de l'Inde.</p>
 </div>
+    <div class=\"container\">
+      <h1>Haze</h1>
+      <div id=\"demo\" class=\"carousel slide\" data-ride=\"carousel\">
+        <!-- Indicateurs -->
+        <ul class=\"carousel-indicators\">
+          <li data-target=\"#demo\" data-slide-to=\"0\" class=\"active\"></li>
+          <li data-target=\"#demo\" data-slide-to=\"1\"></li>
+          <li data-target=\"#demo\" data-slide-to=\"2\"></li>
+        </ul>
+
+        <!-- Carrousel -->
+        <div class=\"carousel-inner\">
+          <div class=\"carousel-item active\">
+            <img src=\"https://www.pierre-giraud.com/bootstrap-carrousel-slide-1.jpg\" alt=\"Carrousel slide 1\" class=\"d-block w-100\">
+            <div class=\"carousel-caption d-none d-md-block\">
+              <h4>Purple</h4>
+            </div>
+          </div>
+          <div class=\"carousel-item\">
+            <img src=\"https://www.pierre-giraud.com/bootstrap-carrousel-slide-2.jpg\" alt=\"Carrousel slide 2\" class=\"d-block w-100\">
+            <div class=\"carousel-caption d-none d-md-block\">
+              <h4>Skunk</h4>
+            </div>
+          </div>
+          <div class=\"carousel-item\">
+            <img src=\"https://www.pierre-giraud.com/bootstrap-carrousel-slide-3.jpg\" alt=\"Carrousel slide 3\" class=\"d-block w-100\">
+            <div class=\"carousel-caption d-none d-md-block\">
+              <h4>Berry White</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contrôles -->
+        <a class=\"carousel-control-prev\" href=\"#demo\" role=\"button\" data-slide=\"prev\">
+          <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>
+          <span class=\"sr-only\">Précédent</span>
+        </a>
+        <a class=\"carousel-control-next\" href=\"#demo\" role=\"button\" data-slide=\"next\">
+          <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>
+          <span class=\"sr-only\">Suivant</span>
+        </a>
+      </div>
+    </div>
+
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -129,30 +156,66 @@ class __TwigTemplate_9abaf92c95a1e7cbe117cfdbc0561a55ddb6af20b849c77432100a67b31
 
     public function getDebugInfo()
     {
-        return array (  107 => 17,  103 => 16,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Homepage!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class=\"example-wrapper\">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href=\"{{ '/home/jean/Documents/Github/symfony_project/src/Controller/HomeController.php'|file_link(0) }}\">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href=\"{{ '/home/jean/Documents/Github/symfony_project/templates/home/index.html.twig'|file_link(0) }}\">templates/home/index.html.twig</a></code></li>
-    </ul>
+<div class=\"jumbotron text-center bg-white\">
+    <h1>WHITE WIDOW</h1>
+    <p>White Widow est une souche de cannabis Indica créée par le producteur de cannabis australien Scott « Shantibaba » 
+    Blakey. Son origine proviendrait d'un croisement entre une femelle Sativa brésilienne et un mâle Sativa/Indica du Sud 
+    de l'Inde.</p>
 </div>
+    <div class=\"container\">
+      <h1>Haze</h1>
+      <div id=\"demo\" class=\"carousel slide\" data-ride=\"carousel\">
+        <!-- Indicateurs -->
+        <ul class=\"carousel-indicators\">
+          <li data-target=\"#demo\" data-slide-to=\"0\" class=\"active\"></li>
+          <li data-target=\"#demo\" data-slide-to=\"1\"></li>
+          <li data-target=\"#demo\" data-slide-to=\"2\"></li>
+        </ul>
+
+        <!-- Carrousel -->
+        <div class=\"carousel-inner\">
+          <div class=\"carousel-item active\">
+            <img src=\"https://www.pierre-giraud.com/bootstrap-carrousel-slide-1.jpg\" alt=\"Carrousel slide 1\" class=\"d-block w-100\">
+            <div class=\"carousel-caption d-none d-md-block\">
+              <h4>Purple</h4>
+            </div>
+          </div>
+          <div class=\"carousel-item\">
+            <img src=\"https://www.pierre-giraud.com/bootstrap-carrousel-slide-2.jpg\" alt=\"Carrousel slide 2\" class=\"d-block w-100\">
+            <div class=\"carousel-caption d-none d-md-block\">
+              <h4>Skunk</h4>
+            </div>
+          </div>
+          <div class=\"carousel-item\">
+            <img src=\"https://www.pierre-giraud.com/bootstrap-carrousel-slide-3.jpg\" alt=\"Carrousel slide 3\" class=\"d-block w-100\">
+            <div class=\"carousel-caption d-none d-md-block\">
+              <h4>Berry White</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contrôles -->
+        <a class=\"carousel-control-prev\" href=\"#demo\" role=\"button\" data-slide=\"prev\">
+          <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>
+          <span class=\"sr-only\">Précédent</span>
+        </a>
+        <a class=\"carousel-control-next\" href=\"#demo\" role=\"button\" data-slide=\"next\">
+          <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>
+          <span class=\"sr-only\">Suivant</span>
+        </a>
+      </div>
+    </div>
+
 {% endblock %}
 ", "home/index.html.twig", "/home/val/code/BlaxFontaine/symfony_project/templates/home/index.html.twig");
     }

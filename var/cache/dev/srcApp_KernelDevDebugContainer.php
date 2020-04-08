@@ -16,6 +16,11 @@ if (!\class_exists(srcApp_KernelDevDebugContainer::class, false)) {
 
 return new \ContainerSvBOgkB\srcApp_KernelDevDebugContainer([
     'container.build_hash' => 'SvBOgkB',
+<<<<<<< HEAD
     'container.build_id' => 'ea2b5c26',
     'container.build_time' => 1586339404,
+=======
+    'container.build_id' => 'a0605f10',
+    'container.build_time' => 1586353410,
+>>>>>>> 88ce6800a3ee30b9d16ce0b3ca3c00b047967a9c
 ], __DIR__.\DIRECTORY_SEPARATOR.'ContainerSvBOgkB');

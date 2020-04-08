@@ -65,7 +65,7 @@ class __TwigTemplate_692022b8c818efae4aec109d95f4c8e3117510b10c30cb53deaf3f1c5dd
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Log in!";
+        echo "Login!";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -112,7 +112,7 @@ class __TwigTemplate_692022b8c818efae4aec109d95f4c8e3117510b10c30cb53deaf3f1c5dd
     ";
         }
         // line 16
-        echo "
+        echo "<div class=\"jumbotron text-center bg-white\">
     <h1 class=\"h3 mb-3 font-weight-normal\">Login</h1>
     <label for=\"inputEmail\">Email</label>
     <input type=\"email\" value=\"";
@@ -128,7 +128,7 @@ class __TwigTemplate_692022b8c818efae4aec109d95f4c8e3117510b10c30cb53deaf3f1c5dd
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         echo "\"
     >
-
+</div>
 ";
         // line 30
         echo "
@@ -171,7 +171,7 @@ class __TwigTemplate_692022b8c818efae4aec109d95f4c8e3117510b10c30cb53deaf3f1c5dd
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Log in!{% endblock %}
+{% block title %}Login!{% endblock %}
 
 {% block body %}
 <form method=\"post\">
@@ -184,7 +184,7 @@ class __TwigTemplate_692022b8c818efae4aec109d95f4c8e3117510b10c30cb53deaf3f1c5dd
             You are logged in as {{ app.user.username }}, <a href=\"{{ path('app_logout') }}\">Logout</a>
         </div>
     {% endif %}
-
+<div class=\"jumbotron text-center bg-white\">
     <h1 class=\"h3 mb-3 font-weight-normal\">Login</h1>
     <label for=\"inputEmail\">Email</label>
     <input type=\"email\" value=\"{{ last_username }}\" name=\"email\" id=\"inputEmail\" class=\"form-control\" required autofocus>
@@ -194,7 +194,7 @@ class __TwigTemplate_692022b8c818efae4aec109d95f4c8e3117510b10c30cb53deaf3f1c5dd
     <input type=\"hidden\" name=\"_csrf_token\"
            value=\"{{ csrf_token('authenticate') }}\"
     >
-
+</div>
 {#     
         Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
         See https://symfony.com/doc/current/security/remember_me.html #}
