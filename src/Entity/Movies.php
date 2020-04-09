@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -40,6 +42,16 @@ class Movies
      * @ORM\Column(type="string", length=255)
      */
     private $genre;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\UserList", mappedBy="movie_list")
+     */
+    private $userLists;
+
+    public function __construct()
+    {
+        $this->userLists = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -102,6 +114,34 @@ class Movies
     public function setGenre(string $genre): self
     {
         $this->genre = $genre;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|UserList[]
+     */
+    public function getUserLists(): Collection
+    {
+        return $this->userLists;
+    }
+
+    public function addUserList(UserList $userList): self
+    {
+        if (!$this->userLists->contains($userList)) {
+            $this->userLists[] = $userList;
+            $userList->addMovieList($this);
+        }
+
+        return $this;
+    }
+
+    public function removeUserList(UserList $userList): self
+    {
+        if ($this->userLists->contains($userList)) {
+            $this->userLists->removeElement($userList);
+            $userList->removeMovieList($this);
+        }
 
         return $this;
     }
