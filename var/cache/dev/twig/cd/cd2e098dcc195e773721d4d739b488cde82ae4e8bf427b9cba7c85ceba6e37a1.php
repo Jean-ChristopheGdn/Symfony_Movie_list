@@ -133,6 +133,6 @@ class __TwigTemplate_8720abb112ad71d077e39886be11d86c44c217185865303bdeff36954c6
 
     <a href=\"{{ path('movies_index') }}\">back to list</a>
 {% endblock %}
-", "movies/new.html.twig", "/home/jean/Documents/Github/symfony_project/templates/movies/new.html.twig");
+", "movies/new.html.twig", "/home/val/code/BlaxFontaine/symfony_project/templates/movies/new.html.twig");
     }
 }

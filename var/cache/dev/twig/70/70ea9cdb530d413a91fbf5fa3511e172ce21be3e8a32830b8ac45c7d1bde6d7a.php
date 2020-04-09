@@ -233,6 +233,6 @@ class __TwigTemplate_441b1a8b1ad1dfda05228346c7c751965fca5805e5296e13269281a25c7
 
     <a href=\"{{ path('movies_new') }}\">Create new</a>
 {% endblock %}
-", "movies/index.html.twig", "/home/jean/Documents/Github/symfony_project/templates/movies/index.html.twig");
+", "movies/index.html.twig", "/home/val/code/BlaxFontaine/symfony_project/templates/movies/index.html.twig");
     }
 }

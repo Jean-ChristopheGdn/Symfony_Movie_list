@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello SearchController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Welcome to the movie search engine</h1>
+    <form action='' method='POST' class="form-inline d-flex justify-content-center md-form form-sm mt-0">
+      <i class="fas fa-search" aria-hidden="true"></i>
+      <input name="keyword" class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+        aria-label="Search">
+    </form>
+
+    <ul>
+      {% for title in titles %}
+          <li>{{ title }}</li>
+      {% endfor %}
+    </ul>
+</div>
+{% endblock %}
