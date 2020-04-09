@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -34,6 +36,16 @@ class Users implements UserInterface
      * @ORM\Column(type="string")
      */
     private $password;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\UserList", mappedBy="users", orphanRemoval=true)
+     */
+    private $userLists;
+
+    public function __construct()
+    {
+        $this->userLists = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -111,5 +123,36 @@ class Users implements UserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    /**
+     * @return Collection|UserList[]
+     */
+    public function getUserLists(): Collection
+    {
+        return $this->userLists;
+    }
+
+    public function addUserList(UserList $userList): self
+    {
+        if (!$this->userLists->contains($userList)) {
+            $this->userLists[] = $userList;
+            $userList->setUsers($this);
+        }
+
+        return $this;
+    }
+
+    public function removeUserList(UserList $userList): self
+    {
+        if ($this->userLists->contains($userList)) {
+            $this->userLists->removeElement($userList);
+            // set the owning side to null (unless already changed)
+            if ($userList->getUsers() === $this) {
+                $userList->setUsers(null);
+            }
+        }
+
+        return $this;
     }
 }

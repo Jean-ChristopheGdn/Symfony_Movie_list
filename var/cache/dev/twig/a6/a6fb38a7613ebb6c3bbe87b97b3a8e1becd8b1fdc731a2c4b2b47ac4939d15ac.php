@@ -78,7 +78,7 @@ class __TwigTemplate_1c16d9dc99174af876caf99deb8b46794a893521d7b363be36219e972c1
             </li>
             <li class=\"nav-item dropdown\">
               <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                Dropdown
+                Films
               </a>
               <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
                 <a class=\"dropdown-item\" href=\"#\">Action</a>
@@ -88,27 +88,53 @@ class __TwigTemplate_1c16d9dc99174af876caf99deb8b46794a893521d7b363be36219e972c1
               </div>
             </li>
           </ul>
-
+            ";
+        // line 41
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 41, $this->source); })()), "user", [], "any", false, false, false, 41)) {
+            // line 42
+            echo "                <div class=\"col s12 m6 l6 offset-m3 offset-l3\">
+                    Tu es actuellement connecté en tant que ";
+            // line 43
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 43, $this->source); })()), "user", [], "any", false, false, false, 43), "username", [], "any", false, false, false, 43), "html", null, true);
+            echo ", <a href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+            echo "\">Déconnecte-toi</a>
+                </div>
             <li class=\"nav-item\" text-center>
-              <a class=\"nav-link\" href=\"login\">Login</a>
+              <a class=\"nav-link\" href=\"logout\">Logout</a>
             </li>
-            <li class=\"nav-item\" texte-center>
-              <a class=\"nav-link\" href=\"register\">Register</a>
+           ";
+        } else {
+            // line 49
+            echo "            <li class=\"nav-item\" text-center>
+              <a class=\"nav-link\" href=\"";
+            // line 50
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
+            echo "\">Login</a>
             </li>
-        </div>
+            <li>
+              <a class=\"nav-link\" href=\"";
+            // line 53
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
+            echo "\">Register</a>
+            </li>
+           ";
+        }
+        // line 56
+        echo "        </div>
       </nav>
         ";
-        // line 50
+        // line 58
         $this->displayBlock('body', $context, $blocks);
-        // line 51
+        // line 59
         echo "
         <script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\" integrity=\"sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n\" crossorigin=\"anonymous\"></script>
         <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\" integrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\" crossorigin=\"anonymous\"></script>
         <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\" integrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\" crossorigin=\"anonymous\"></script>
         ";
-        // line 55
+        // line 63
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 62
+        // line 70
         echo "
     </body>
 </html>
@@ -167,7 +193,7 @@ class __TwigTemplate_1c16d9dc99174af876caf99deb8b46794a893521d7b363be36219e972c1
 
     }
 
-    // line 50
+    // line 58
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -185,7 +211,7 @@ class __TwigTemplate_1c16d9dc99174af876caf99deb8b46794a893521d7b363be36219e972c1
 
     }
 
-    // line 55
+    // line 63
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -195,7 +221,7 @@ class __TwigTemplate_1c16d9dc99174af876caf99deb8b46794a893521d7b363be36219e972c1
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 56
+        // line 64
         echo "          ";
         echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("app");
         echo "
@@ -224,7 +250,7 @@ class __TwigTemplate_1c16d9dc99174af876caf99deb8b46794a893521d7b363be36219e972c1
 
     public function getDebugInfo()
     {
-        return array (  199 => 56,  189 => 55,  171 => 50,  156 => 9,  154 => 8,  144 => 7,  125 => 5,  112 => 62,  110 => 55,  104 => 51,  102 => 50,  65 => 16,  60 => 13,  58 => 7,  53 => 5,  47 => 1,);
+        return array (  225 => 64,  215 => 63,  197 => 58,  182 => 9,  180 => 8,  170 => 7,  151 => 5,  138 => 70,  136 => 63,  130 => 59,  128 => 58,  124 => 56,  118 => 53,  112 => 50,  109 => 49,  98 => 43,  95 => 42,  93 => 41,  65 => 16,  60 => 13,  58 => 7,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -259,7 +285,7 @@ class __TwigTemplate_1c16d9dc99174af876caf99deb8b46794a893521d7b363be36219e972c1
             </li>
             <li class=\"nav-item dropdown\">
               <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                Dropdown
+                Films
               </a>
               <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
                 <a class=\"dropdown-item\" href=\"#\">Action</a>
@@ -269,13 +295,21 @@ class __TwigTemplate_1c16d9dc99174af876caf99deb8b46794a893521d7b363be36219e972c1
               </div>
             </li>
           </ul>
-
+            {% if app.user %}
+                <div class=\"col s12 m6 l6 offset-m3 offset-l3\">
+                    Tu es actuellement connecté en tant que {{ app.user.username }}, <a href=\"{{ path('app_logout') }}\">Déconnecte-toi</a>
+                </div>
             <li class=\"nav-item\" text-center>
-              <a class=\"nav-link\" href=\"login\">Login</a>
+              <a class=\"nav-link\" href=\"logout\">Logout</a>
             </li>
-            <li class=\"nav-item\" texte-center>
-              <a class=\"nav-link\" href=\"register\">Register</a>
+           {% else %}
+            <li class=\"nav-item\" text-center>
+              <a class=\"nav-link\" href=\"{{ path('app_login') }}\">Login</a>
             </li>
+            <li>
+              <a class=\"nav-link\" href=\"{{ path('app_register') }}\">Register</a>
+            </li>
+           {% endif %}
         </div>
       </nav>
         {% block body %}{% endblock %}
