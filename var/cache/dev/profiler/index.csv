@@ -156,3 +156,13 @@ e18425,127.0.0.1,GET,http://localhost:8001/login,1586448221,,200
 c2ef6a,127.0.0.1,GET,http://localhost:8001/register,1586448223,,200
 df5508,127.0.0.1,GET,http://localhost:8001/register,1586448380,,200
 0feb6f,127.0.0.1,GET,http://localhost:8001/,1586448387,,200
+e00e7d,127.0.0.1,GET,http://localhost:8001/,1586449342,,200
+9e303d,127.0.0.1,GET,http://localhost:8001/login,1586449353,,200
+861e5c,127.0.0.1,POST,http://localhost:8001/login,1586449357,,302
+712f73,127.0.0.1,GET,http://localhost:8001/,1586449357,,200
+1b3be2,127.0.0.1,GET,http://localhost:8001/logout,1586449359,,302
+55f40e,127.0.0.1,GET,http://localhost:8001/,1586449359,,200
+482bd8,127.0.0.1,GET,http://localhost:8001/,1586449397,,200
+24969a,127.0.0.1,GET,http://localhost:8001/login,1586449399,,200
+9dcb37,127.0.0.1,POST,http://localhost:8001/login,1586449402,,302
+cb9b6c,127.0.0.1,GET,http://localhost:8001/,1586449403,,200
