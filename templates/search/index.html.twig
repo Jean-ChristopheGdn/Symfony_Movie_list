@@ -3,10 +3,6 @@
 {% block title %}Look for movies!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
 <div class="container">
   <div class="jumbotron text-center">
@@ -22,14 +18,31 @@
     {% for movie in movies %}
       <div class="col mb-4">
         <div class="card h-100">
-          <img src="https://image.tmdb.org/t/p/w500{{movie['poster_path']}}" class="card-img-top" alt="...">
+          <!-- Card image -->
+          <div class="view overlay">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{movie['poster_path']}}" alt="{{movie['title']}}">
+            <a>
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+
+          <!-- Social buttons -->
+          <div class="card-share">
+            <!-- Button action -->
+            <a class="btn-floating btn-action share-toggle ml-auto mr-4 float-right"><i class="fas fa-star"></i></a>
+          </div>
+          <!-- Card content -->
           <div class="card-body">
-            <h5 class="card-title">{{movie['title']}}</h5>
+            <!-- Title -->
+            <h4 class="card-title">{{movie['title']}}</h4>
+            <hr>
+            <!-- Text -->
             <p class="card-text">{{movie['overview']}}</p>
+            <a href="{{ path('search_show', {'id': movie['id']}) }}"><button class="btn btn-dark">Read more</button></a>
           </div>
         </div>
       </div>
     {% endfor %}
-  </div>
-</div>
 {% endblock %}
+
+
