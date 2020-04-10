@@ -39,9 +39,15 @@ class UserList
      */
     private $movie_list;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Movies", inversedBy="userLists")
+     */
+    private $movies;
+
     public function __construct()
     {
         $this->movie_list = new ArrayCollection();
+        $this->movies = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -106,6 +112,32 @@ class UserList
     {
         if ($this->movie_list->contains($movieList)) {
             $this->movie_list->removeElement($movieList);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Movies[]
+     */
+    public function getMovies(): Collection
+    {
+        return $this->movies;
+    }
+
+    public function addMovie(Movies $movie): self
+    {
+        if (!$this->movies->contains($movie)) {
+            $this->movies[] = $movie;
+        }
+
+        return $this;
+    }
+
+    public function removeMovie(Movies $movie): self
+    {
+        if ($this->movies->contains($movie)) {
+            $this->movies->removeElement($movie);
         }
 
         return $this;
