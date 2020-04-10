@@ -25,7 +25,6 @@
               <div class="mask rgba-white-slight"></div>
             </a>
           </div>
-
           <!-- Social buttons -->
           <div class="card-share">
             <!-- Button action -->
@@ -38,6 +37,7 @@
             <hr>
             <!-- Text -->
             <p class="card-text">{{movie['overview']}}</p>
+            {# <button class="btn"></button> #}
             <a href="{{ path('search_show', {'id': movie['id']}) }}"><button class="btn btn-dark">Read more</button></a>
           </div>
         </div>
