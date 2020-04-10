@@ -85,11 +85,7 @@ class __TwigTemplate_7b6152a8e5fd6416ce88e91758a9056fc31691681a122eed7393aaf5f00
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
+        echo "
 <div class=\"container\">
   <div class=\"jumbotron text-center\">
     <h1>Welcome to the movie search engine</h1>
@@ -102,26 +98,48 @@ class __TwigTemplate_7b6152a8e5fd6416ce88e91758a9056fc31691681a122eed7393aaf5f00
 
   <div class=\"row row-cols-1 row-cols-md-3\">
     ";
-        // line 22
+        // line 18
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["movies"]) || array_key_exists("movies", $context) ? $context["movies"] : (function () { throw new RuntimeError('Variable "movies" does not exist.', 22, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["movies"]) || array_key_exists("movies", $context) ? $context["movies"] : (function () { throw new RuntimeError('Variable "movies" does not exist.', 18, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["movie"]) {
-            // line 23
+            // line 19
             echo "      <div class=\"col mb-4\">
         <div class=\"card h-100\">
-          <img src=\"https://image.tmdb.org/t/p/w500";
-            // line 25
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["movie"], "poster_path", [], "array", false, false, false, 25), "html", null, true);
-            echo "\" class=\"card-img-top\" alt=\"...\">
+          <!-- Card image -->
+          <div class=\"view overlay\">
+            <img class=\"card-img-top\" src=\"https://image.tmdb.org/t/p/w500";
+            // line 23
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["movie"], "poster_path", [], "array", false, false, false, 23), "html", null, true);
+            echo "\" alt=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["movie"], "title", [], "array", false, false, false, 23), "html", null, true);
+            echo "\">
+            <a>
+              <div class=\"mask rgba-white-slight\"></div>
+            </a>
+          </div>
+          <!-- Social buttons -->
+          <div class=\"card-share\">
+            <!-- Button action -->
+            <a class=\"btn-floating btn-action share-toggle ml-auto mr-4 float-right\"><i class=\"fas fa-star\"></i></a>
+          </div>
+          <!-- Card content -->
           <div class=\"card-body\">
-            <h5 class=\"card-title\">";
-            // line 27
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["movie"], "title", [], "array", false, false, false, 27), "html", null, true);
-            echo "</h5>
+            <!-- Title -->
+            <h4 class=\"card-title\">";
+            // line 36
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["movie"], "title", [], "array", false, false, false, 36), "html", null, true);
+            echo "</h4>
+            <hr>
+            <!-- Text -->
             <p class=\"card-text\">";
-            // line 28
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["movie"], "overview", [], "array", false, false, false, 28), "html", null, true);
+            // line 39
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["movie"], "overview", [], "array", false, false, false, 39), "html", null, true);
             echo "</p>
+            ";
+            // line 41
+            echo "            <a href=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("search_show", ["id" => twig_get_attribute($this->env, $this->source, $context["movie"], "id", [], "array", false, false, false, 41)]), "html", null, true);
+            echo "\"><button class=\"btn btn-dark\">Read more</button></a>
           </div>
         </div>
       </div>
@@ -130,10 +148,6 @@ class __TwigTemplate_7b6152a8e5fd6416ce88e91758a9056fc31691681a122eed7393aaf5f00
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['movie'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 33
-        echo "  </div>
-</div>
-";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -154,7 +168,7 @@ class __TwigTemplate_7b6152a8e5fd6416ce88e91758a9056fc31691681a122eed7393aaf5f00
 
     public function getDebugInfo()
     {
-        return array (  134 => 33,  123 => 28,  119 => 27,  114 => 25,  110 => 23,  106 => 22,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  140 => 41,  136 => 39,  130 => 36,  112 => 23,  106 => 19,  102 => 18,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -164,10 +178,6 @@ class __TwigTemplate_7b6152a8e5fd6416ce88e91758a9056fc31691681a122eed7393aaf5f00
 {% block title %}Look for movies!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
 <div class=\"container\">
   <div class=\"jumbotron text-center\">
@@ -183,17 +193,34 @@ class __TwigTemplate_7b6152a8e5fd6416ce88e91758a9056fc31691681a122eed7393aaf5f00
     {% for movie in movies %}
       <div class=\"col mb-4\">
         <div class=\"card h-100\">
-          <img src=\"https://image.tmdb.org/t/p/w500{{movie['poster_path']}}\" class=\"card-img-top\" alt=\"...\">
+          <!-- Card image -->
+          <div class=\"view overlay\">
+            <img class=\"card-img-top\" src=\"https://image.tmdb.org/t/p/w500{{movie['poster_path']}}\" alt=\"{{movie['title']}}\">
+            <a>
+              <div class=\"mask rgba-white-slight\"></div>
+            </a>
+          </div>
+          <!-- Social buttons -->
+          <div class=\"card-share\">
+            <!-- Button action -->
+            <a class=\"btn-floating btn-action share-toggle ml-auto mr-4 float-right\"><i class=\"fas fa-star\"></i></a>
+          </div>
+          <!-- Card content -->
           <div class=\"card-body\">
-            <h5 class=\"card-title\">{{movie['title']}}</h5>
+            <!-- Title -->
+            <h4 class=\"card-title\">{{movie['title']}}</h4>
+            <hr>
+            <!-- Text -->
             <p class=\"card-text\">{{movie['overview']}}</p>
+            {# <button class=\"btn\"></button> #}
+            <a href=\"{{ path('search_show', {'id': movie['id']}) }}\"><button class=\"btn btn-dark\">Read more</button></a>
           </div>
         </div>
       </div>
     {% endfor %}
-  </div>
-</div>
 {% endblock %}
-", "search/index.html.twig", "/home/jean/Documents/Github/symfony_project/templates/search/index.html.twig");
+
+
+", "search/index.html.twig", "/home/val/code/BlaxFontaine/symfony_project/templates/search/index.html.twig");
     }
 }
