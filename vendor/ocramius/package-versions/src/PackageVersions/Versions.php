@@ -125,11 +125,9 @@ final class Versions
   'symfony/polyfill-php71' => '*@a9b5d1e591f37f622ee32b74274942e63afd48cd',
   'symfony/polyfill-php70' => '*@a9b5d1e591f37f622ee32b74274942e63afd48cd',
   'symfony/polyfill-php56' => '*@a9b5d1e591f37f622ee32b74274942e63afd48cd',
-<<<<<<< HEAD
-  '__root__' => 'dev-movie-card-front@a9b5d1e591f37f622ee32b74274942e63afd48cd',
-=======
+
   '__root__' => 'dev-master@a9b5d1e591f37f622ee32b74274942e63afd48cd',
->>>>>>> list
+
 );
 
     private function __construct()

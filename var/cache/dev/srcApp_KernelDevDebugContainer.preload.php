@@ -6,7 +6,7 @@
 use Symfony\Component\DependencyInjection\Dumper\Preloader;
 
 require dirname(__DIR__, 3).'/vendor/autoload.php';
-require __DIR__.'/ContainerJoxTFQW/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/ContainerBl2mSWj/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -30,15 +30,17 @@ $classes[] = 'Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser';
 $classes[] = 'Symfony\Bundle\FrameworkBundle\EventListener\ResolveControllerNameSubscriber';
 $classes[] = 'Symfony\Component\HttpFoundation\RequestMatcher';
 $classes[] = 'Symfony\Component\DependencyInjection\ServiceLocator';
+$classes[] = 'App\Controller\AdminController';
 $classes[] = 'App\Controller\HomeController';
 $classes[] = 'App\Controller\MoviesController';
+$classes[] = 'App\Controller\ProfileController';
 $classes[] = 'App\Controller\RegistrationController';
 $classes[] = 'App\Controller\SearchController';
 $classes[] = 'App\Controller\SecurityController';
-$classes[] = 'App\Form\MovieType';
+$classes[] = 'App\Controller\UsersController';
 $classes[] = 'App\Form\MoviesType';
 $classes[] = 'App\Form\RegistrationFormType';
-$classes[] = 'App\Repository\MovieListRepository';
+$classes[] = 'App\Form\UsersType';
 $classes[] = 'App\Repository\MoviesRepository';
 $classes[] = 'App\Repository\UserListRepository';
 $classes[] = 'App\Repository\UsersRepository';

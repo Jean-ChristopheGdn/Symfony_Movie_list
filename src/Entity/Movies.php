@@ -44,9 +44,14 @@ class Movies
     private $genre;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\UserList", mappedBy="movie_list")
+     * @ORM\ManyToMany(targetEntity="App\Entity\UserList", mappedBy="movies")
      */
     private $userLists;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\UserList", mappedBy="movie_list")
+     */
+
 
     public function __construct()
     {
@@ -130,7 +135,7 @@ class Movies
     {
         if (!$this->userLists->contains($userList)) {
             $this->userLists[] = $userList;
-            $userList->addMovieList($this);
+            $userList->addMovie($this);
         }
 
         return $this;
@@ -140,7 +145,7 @@ class Movies
     {
         if ($this->userLists->contains($userList)) {
             $this->userLists->removeElement($userList);
-            $userList->removeMovieList($this);
+            $userList->removeMovie($this);
         }
 
         return $this;
