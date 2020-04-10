@@ -378,6 +378,9 @@
         <argument type="service" id=".service_locator.vdmMuyE.App\Controller\UsersController"/>
       </call>
     </service>
+    <service id="App\Form\EditUserType" class="App\Form\EditUserType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\MoviesType" class="App\Form\MoviesType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -829,6 +832,7 @@
         <argument>Symfony\Bridge\Doctrine\Form\Type</argument>
       </argument>
       <argument type="collection">
+        <argument>App\Form\EditUserType</argument>
         <argument>App\Form\MoviesType</argument>
         <argument>App\Form\RegistrationFormType</argument>
         <argument>App\Form\UsersType</argument>
@@ -1167,7 +1171,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.lZRfQFa"/>
+      <argument type="service" id=".service_locator.6Jaxc1G"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -4938,6 +4942,8 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\UsersController" class="App\Controller\UsersController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\UsersController" class="App\Controller\UsersController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\UsersController" class="App\Controller\UsersController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\EditUserType" class="App\Form\EditUserType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\EditUserType" class="App\Form\EditUserType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\MoviesType" class="App\Form\MoviesType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\MoviesType" class="App\Form\MoviesType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" abstract="true"/>
@@ -5160,6 +5166,12 @@
         <argument>make:migration</argument>
       </call>
     </service>
+    <service id=".service_locator.EBLo.Np" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="user" type="service" id=".errored..service_locator.EBLo.Np.App\Entity\Users"/>
+      </argument>
+    </service>
     <service id=".service_locator.GMFifXH" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5192,15 +5204,10 @@
         <argument key="usersRepository" type="service" id="App\Repository\UsersRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.EBLo.Np" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.iPfCTG." class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="user" type="service" id=".errored..service_locator.EBLo.Np.App\Entity\Users"/>
-      </argument>
-    </service>
-    <service id=".service_locator.0b8BCWg" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
+        <argument key="App\Controller\AdminController::editUser" type="service" id=".service_locator.EBLo.Np"/>
         <argument key="App\Controller\MoviesController::delete" type="service" id=".service_locator.ppiRA5w"/>
         <argument key="App\Controller\MoviesController::edit" type="service" id=".service_locator.ppiRA5w"/>
         <argument key="App\Controller\MoviesController::index" type="service" id=".service_locator.GMFifXH"/>
@@ -5211,6 +5218,7 @@
         <argument key="App\Controller\UsersController::edit" type="service" id=".service_locator.EBLo.Np"/>
         <argument key="App\Controller\UsersController::index" type="service" id=".service_locator.JTO0v3v"/>
         <argument key="App\Controller\UsersController::show" type="service" id=".service_locator.EBLo.Np"/>
+        <argument key="App\Controller\AdminController:editUser" type="service" id=".service_locator.EBLo.Np"/>
         <argument key="App\Controller\MoviesController:delete" type="service" id=".service_locator.ppiRA5w"/>
         <argument key="App\Controller\MoviesController:edit" type="service" id=".service_locator.ppiRA5w"/>
         <argument key="App\Controller\MoviesController:index" type="service" id=".service_locator.GMFifXH"/>
@@ -5282,9 +5290,10 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.lZRfQFa" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.6Jaxc1G" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Form\EditUserType" type="service" id="App\Form\EditUserType"/>
         <argument key="App\Form\MoviesType" type="service" id="App\Form\MoviesType"/>
         <argument key="App\Form\RegistrationFormType" type="service" id="App\Form\RegistrationFormType"/>
         <argument key="App\Form\UsersType" type="service" id="App\Form\UsersType"/>
@@ -5688,12 +5697,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.0b8BCWg"/>
+      <argument type="service" id=".service_locator.iPfCTG."/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.0b8BCWg"/>
+      <argument type="service" id=".service_locator.iPfCTG."/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -5703,8 +5712,8 @@
       </call>
       <factory class="Symfony\Component\HttpClient\HttpClient" method="create"/>
     </service>
-    <service id=".errored..service_locator.ppiRA5w.App\Entity\Movies" class="App\Entity\Movies"/>
     <service id=".errored..service_locator.EBLo.Np.App\Entity\Users" class="App\Entity\Users"/>
+    <service id=".errored..service_locator.ppiRA5w.App\Entity\Movies" class="App\Entity\Movies"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <argument type="service" id=".service_locator.2rVv97q"/>
       <argument type="collection">
@@ -6092,7 +6101,7 @@
     <service id="Symfony\WebpackEncoreBundle\Asset\EntrypointLookupInterface" alias="webpack_encore.entrypoint_lookup[_default]"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.0b8BCWg"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.iPfCTG."/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

@@ -13,7 +13,8 @@ return [
         '/_profiler/search_bar' => [[['_route' => '_profiler_search_bar', '_controller' => 'web_profiler.controller.profiler::searchBarAction'], null, null, null, false, false, null]],
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
-        '/admin' => [[['_route' => 'admin', '_controller' => 'App\\Controller\\AdminController::index'], null, null, null, false, false, null]],
+        '/admin' => [[['_route' => 'admin_index', '_controller' => 'App\\Controller\\AdminController::index'], null, null, null, true, false, null]],
+        '/admin/users' => [[['_route' => 'admin_users', '_controller' => 'App\\Controller\\AdminController::users'], null, null, null, false, false, null]],
         '/movies' => [[['_route' => 'movies_index', '_controller' => 'App\\Controller\\MoviesController::index'], null, ['GET' => 0], null, true, false, null]],
         '/movies/new' => [[['_route' => 'movies_new', '_controller' => 'App\\Controller\\MoviesController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/profile' => [[['_route' => 'profile', '_controller' => 'App\\Controller\\ProfileController::index'], null, null, null, false, false, null]],
@@ -42,16 +43,17 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
+                .'|/admin/user/edit/([^/]++)(*:194)'
                 .'|/movies/([^/]++)(?'
-                    .'|(*:188)'
-                    .'|/edit(*:201)'
-                    .'|(*:209)'
+                    .'|(*:221)'
+                    .'|/edit(*:234)'
+                    .'|(*:242)'
                 .')'
-                .'|/search/([^/]++)(*:234)'
+                .'|/search/([^/]++)(*:267)'
                 .'|/users/([^/]++)(?'
-                    .'|(*:260)'
-                    .'|/edit(*:273)'
-                    .'|(*:281)'
+                    .'|(*:293)'
+                    .'|/edit(*:306)'
+                    .'|(*:314)'
                 .')'
             .')/?$}sD',
     ],
@@ -63,13 +65,14 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        188 => [[['_route' => 'movies_show', '_controller' => 'App\\Controller\\MoviesController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        201 => [[['_route' => 'movies_edit', '_controller' => 'App\\Controller\\MoviesController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        209 => [[['_route' => 'movies_delete', '_controller' => 'App\\Controller\\MoviesController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
-        234 => [[['_route' => 'search_show', '_controller' => 'App\\Controller\\SearchController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        260 => [[['_route' => 'users_show', '_controller' => 'App\\Controller\\UsersController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        273 => [[['_route' => 'users_edit', '_controller' => 'App\\Controller\\UsersController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        281 => [
+        194 => [[['_route' => 'admin_edit_user', '_controller' => 'App\\Controller\\AdminController::editUser'], ['id'], null, null, false, true, null]],
+        221 => [[['_route' => 'movies_show', '_controller' => 'App\\Controller\\MoviesController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        234 => [[['_route' => 'movies_edit', '_controller' => 'App\\Controller\\MoviesController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        242 => [[['_route' => 'movies_delete', '_controller' => 'App\\Controller\\MoviesController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        267 => [[['_route' => 'search_show', '_controller' => 'App\\Controller\\SearchController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        293 => [[['_route' => 'users_show', '_controller' => 'App\\Controller\\UsersController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        306 => [[['_route' => 'users_edit', '_controller' => 'App\\Controller\\UsersController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        314 => [
             [['_route' => 'users_delete', '_controller' => 'App\\Controller\\UsersController::delete'], ['id'], ['DELETE' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
